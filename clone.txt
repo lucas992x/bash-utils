@@ -1,0 +1,2 @@
+https://github.com/lucas992x/advent-of-code.git aoc
+https://github.com/lucas992x/gammaprocesses.git
