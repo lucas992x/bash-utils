@@ -1,0 +1,2 @@
+export shdir=~/code/shell
+export pydir=~/code/python
