@@ -14,7 +14,7 @@
 # line should contain a directory (variables can be used).
 
 # get script directory
-dir="$(dirname $(realpath $0))"
+dir="$(dirname "$(realpath $0)")"
 # set destination file
 destfile=~/.bash_aliases
 # clear dest file
@@ -49,10 +49,10 @@ fi
 # config ~/.bashrc if needed
 text="
 # alias definitions
-if [ -f "$destfile" ]; then
-    . "$destfile"
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi"
-if [[ "$(cat ~/.bashrc)" != *". $destfile"* ]]; then
+if [[ "$(cat ~/.bashrc)" != *". ~/.bash_aliases"* ]]; then
     echo "$text" >>~/.bashrc
 fi
 # update

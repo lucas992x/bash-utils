@@ -27,7 +27,7 @@ while getopts "hd:le:f" arg; do
         # read file line by line
         while read line; do
             entries+=("$line")
-        done <"$(dirname $(realpath $0))/pull-list.txt"
+        done <"$(dirname "$(realpath $0)")/pull-list.txt"
         ;;
     e)
         exclude=()
@@ -41,7 +41,7 @@ while getopts "hd:le:f" arg; do
         # read file line by line
         while read line; do
             exclude+=("$line/")
-        done <"$(dirname $(realpath $0))/pull-exclude.txt"
+        done <"$(dirname "$(realpath $0)")/pull-exclude.txt"
         ;;
     *)
         exit 1

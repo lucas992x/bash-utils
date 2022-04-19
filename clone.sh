@@ -6,7 +6,7 @@
 # will be cloned (it must not contain spaces). See clone.txt for examples.
 
 # get script directory
-script_dir="$(dirname $(realpath $0))"
+script_dir="$(dirname "$(realpath $0)")"
 
 # read file line by line
 while read line; do
