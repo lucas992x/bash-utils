@@ -3,7 +3,7 @@
 # This script reads a list of git repositories from text file and clones them (a
 # repository is not cloned if destination directory already esists). Each line
 # should contain one HTTPS URL; it is possible to specify the directory where it
-# will be cloned (it must not contain spaces). See clone.txt for examples.
+# will be cloned (it must not contain spaces). See clone_sample.txt for examples.
 
 # get script directory
 script_dir="$(dirname "$(realpath $0)")"
