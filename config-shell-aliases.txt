@@ -1,3 +1,0 @@
-alias ffhb='ffmpeg -hide_banner'
-alias ytdl='youtube-dl'
-alias ytdlk='youtube-dl -k'
