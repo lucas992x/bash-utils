@@ -66,7 +66,7 @@ done
 
 # execute command in directories
 if [[ ! -z "$entries" ]]; then
-    currentdir=$(pwd) # save current directory
+    currentdir="$PWD"  # save current directory
     for entry in ${entries[@]}; do
         # check if there are directories to exclude
         if [[ ! -z $exclude ]]; then
@@ -77,7 +77,7 @@ if [[ ! -z "$entries" ]]; then
         fi
         if [[ -d "$entry/.git" ]] && [[ ! -L "$entry/.git" ]]; then
             cd "$entry"
-            echo "Executing '$command' command in '$entry'"
+            echo "Executing '$command' command in $PWD"
             eval $command
             print_separator
         fi
